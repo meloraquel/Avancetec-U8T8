@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - AvanceTec</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="corpo_site" >
+    <!-- Cabeçalho -->
+    <header class="headersite">
+        <a href="index.html"><img src="assets/logo1.png" class = "logomenu" alt="AvanceTec"  width=auto height=50 ></a>
+        <nav class="menunav">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="labelmenu">
+            <span class="spammenu"></span>
+            </label>
+            <menu class="sitemenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="depoimentos.html">Depoimentos</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="matricula.html">Matrícula</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="vertical/cadastrocursov.html">Vertical</a></li>
+            </menu>
+            </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="site-main">
+        
+        <section class = "mainlogo">
+            <div>
+                <img src="assets/logo2.png" width="350" height=auto alt="AvanceTec">
+                <h1>AvanceTec</h1>
+                <p>CURSOS DE TECNOLOGIA PARA ALAVANCAR SUA CARREIRA</p>
+            </div>
+        </section>
+        <br><br><br><br>
+
+        <!-- Cadastro de Cursos -->
+        <section class="cadcursossection">
+            
+                <!-- Formulário de Contato -->
+                <div class="cadcursosdiv">
+                    <h2>Cadastro de Cursos</h2>
+                    <h3>Envie uma Mensagem</h3>
+                    <form class="cadcursoform">
+                        <label for="Categoria">Categoria:</label><br>
+                        <input type="text" id="Categoria" name="Categoria" required><br><br>
+
+                        <label for="Curso">Curso:</label><br>
+                        <input type="text" id="Curso" name="Curso" required><br><br>
+
+                        <label for="nivel">Nível:</label><br>
+                        <select id="nivel" name="nivel">
+                            <option value="iniciante">Iniciante</option>
+                            <option value="intermediário">Intermediário</option>
+                            <option value="avancado">Avançado</option>
+                        </select><br><br>
+
+                        <label for="duracao">Duração:</label><br>
+                        <input type="text" id="duracao" name="duracao" required><br><br>
+
+                        <label for="resumo">Resumo:</label><br>
+                        <textarea id="resumo" name="resumo" rows="10" required></textarea><br><br>
+
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+        </section>
+        <br><br><br><br><br>
+        <!--Lista de cursos-->
+        <section>
+        <h2> Lista de Cursos</h2>
+        <table style="border-width: 1px;">
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Curso</th>
+                    <th>Nível</th>
+                    <th>Duração</th>
+                    <th>Resumo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Programação-->
+                <tr>
+                    <td>Programação</td>
+                    <td>HTML e CSS Básico</td>
+                    <td>Iniciante</td>
+                    <td>4 semanas</td>
+                    <td>Aprenda os fundamentos da web: estrutura com HTML e estilização com CSS. Ideal para iniciantes.</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Apagar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Programação</td>
+                    <td>JavaScript para Iniciantes</td>
+                    <td>Iniciante</td>
+                    <td>6 semanas</td>
+                    <td>Domine a linguagem de programação mais usada na web. Aprenda lógica, funções e interatividade.</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Apagar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Programação</td>
+                    <td>React.js</td>
+                    <td>Intermediário</td>
+                    <td>8 semanas</td>
+                    <td>Construa interfaces dinâmicas e modernas com a biblioteca mais popular do JavaScript.</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Apagar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Programação</td>
+                    <td>Node.js</td>
+                    <td>Intermediário</td>
+                    <td>8 semanas</td>
+                    <td>Desenvolva aplicações backend com JavaScript. Aprenda APIs, bancos de dados e servidores.</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Apagar</button>
+                    </td>
+                </tr>                                                
+                <tr>
+                    <td>Programação</td>
+                    <td>Python para Ciência de Dados</td>
+                    <td>Intermediário</td>
+                    <td>10 semanas</td>
+                    <td>Use Python para análise de dados, machine learning e visualização com bibliotecas como Pandas e Matplotlib.</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Apagar</button>
+                    </td>
+                </tr>                
+                <tr>
+                    <td>Programação</td>
+                    <td>Git e Controle de Versão</td>
+                    <td>Iniciante</td>
+                    <td>2 semanas</td>
+                    <td>Aprenda a usar Git para versionamento de código, colaboração em equipe e GitHub.</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Apagar</button>
+                    </td>
+                </tr>                
+                
+            </tbody>
+        </table>
+        </section>
+        <br><br><br><br><br>
+    </main>
+
+
+    <footer class="footer-classic" role="contentinfo">
+        <div class="footer-classic__container">
+            <div class="footer-classic__main">
+                
+                <!-- Column 1: Brand Information -->
+                <div class="footer-classic__brand">
+                    <a href="index.html" class="logo" aria-label="Your Company Homepage">
+                        <!-- Placeholder SVG Logo -->
+                        <img src="assets/logo1.png" class = "logomenu" alt="AvanceTec"  width=auto height=50 >
+                    </a>
+                    <p>
+                        Desenvolvendo profissionais de tecnologia para o futuro
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-classic__links">
+                    <h1 class="footer-classic__heading">Empresa</h1>
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="sobreautor.html">Nosso Time</a></li>
+                        <li><a href="matricula.html">Matrícula</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Resources -->
+                <div class="footer-classic__links">
+                    <h3 class="footer-classic__heading">Alunos</h3>
+                    <ul>
+                        <li><a href="contato.html">Contato/FAQ</a></li>
+                        <li><a href="depoimentos.html">Depoimentos</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-classic__bottom">
+                
+                <p class="footer-classic__copyright">
+                    &copy; 2026 AvanceTec. Desenvolvido por <a href="sobreautor.html">Raquel Melo</a> | Politica de Privacidade</a> | <a href="#">Termos de Serviços</a>
+                </p>
+
+                <nav class="footer-classic__social" aria-label="Social Media">
+                    <ul>
+                        <li><a href="#" aria-label="Our Facebook Profile"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><title>Facebook</title><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a></li>
+                        <li><a href="#" aria-label="Our Twitter Profile"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085 4.93 4.93 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a></li>
+                        <li><a href="#" aria-label="Our LinkedIn Profile"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
