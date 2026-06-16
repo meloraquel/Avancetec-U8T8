@@ -1,0 +1,594 @@
+/* style.css*/
+:root{
+
+  --AzulDarkTech:#1B365D;
+  --Azulintermediario: #2D74B4;
+  --verdeinovacao: #4ADE80;
+  --textoprincipal: #1E293B;
+  --offwhite: #F8FAFC;
+  --white: #fff;
+  --bordas: #3a5a7a55;
+  --bordas2: #3a5a7a99;
+  --bordas3: #3a5a7aff;
+  --FonteMenu: sans-serif
+  
+}
+
+/*Aplicação à todos os documentos*/
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif, 'Montserrat','Times New Roman', Times, serif, ;
+  box-sizing: border-box;
+  color: var(--offwhite);
+
+}
+
+body{
+  background-image: url("../assets/bgdark1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+a{
+  text-decoration: none;
+  color: var(--offwhite);
+}
+
+.texto{
+  text-indent: 4rem;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+ul{
+  font-size: 1.5rem;
+  margin-left: 4rem;
+}
+
+
+
+
+/*main*/
+main{
+  margin-left: 190px;
+  flex: auto;
+
+}
+
+
+/*-----------*/
+
+
+/*Rodapé do site*/
+footer{
+  display: flex;
+  flex-shrink: 0;
+  background-color: var(--verdeinovacao);
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 2.5rem;
+  position: static;
+  box-sizing: border-box;
+  color: var(--textoprincipal);
+}
+/*------------------*/
+
+
+h1,h2,h3{
+  text-align: center;
+}
+
+section{
+  margin-left: 5%;
+  margin-right: 5% ;
+  padding: auto;
+}
+
+.mainlogo{
+  text-align: center;
+  background-image: url("../assets/bginicialdark.png");
+  padding: 2%;
+  
+
+
+}
+
+/* Configuração do menu - https://www.youtube.com/watch?v=5iGoLFkIVl4&t=903s*/ 
+
+
+.headersite{
+  display: inline-block;
+  align-items: center;
+  justify-content:space-between; 
+  height: 100vh;
+  padding: 0.5rem;
+  background-color:var(--AzulDarkTech);
+  width: 180px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+}
+
+.sitemenu{
+  list-style:none;
+  /* display:inline-block; */
+  width: 150px;
+  gap: 0.5rem;
+  flex-direction: column-reverse;
+}
+
+.sitemenu a{
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--offwhite);
+}
+
+.sitemenu a:hover{
+  background-color: var(--verdeinovacao);
+  }
+
+.labelmenu, .checkbox{
+  display: none;
+}
+
+/* Configuração menu responsivo Vertical */
+@media (max-width: 700px){
+  .headersite{
+    width: 100px;
+  }
+
+
+  .sitemenu{
+    display: inline-block;
+    position: absolute;
+    top: 4.6875rem;
+    left: 3rem;
+    background-color: var(--AzulDarkTech);
+    text-align: center;
+    width: 100px;
+    height: 0;
+    z-index: 1;
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+    
+  }
+
+  .labelmenu{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--offwhite);
+    padding-block: 1rem;
+    cursor: pointer;
+  }
+
+  .spammenu{
+    border-top: 0.125rem solid;
+    width: 1.25rem;
+  }
+  .spammenu::before, .spammenu::after{
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 0.125rem;
+  background: currentColor;
+  margin-top: 0.3125rem;
+  position: relative;
+  transition: 0.3s;
+  }
+
+  .sitemenu a{
+  padding: 1rem 0;
+  margin-inline: 0.5rem;
+  border-bottom: 0.0625rem solid var(--textoprincipal); 
+  border-radius: 0;
+
+  }
+
+  .menunav:hover .sitemenu,
+  .checkbox:checked ~ .sitemenu{
+    height: calc(100vh - 4.6875rem);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  .checkbox:checked ~.labelmenu .spammenu{
+    border-top-color: transparent;
+  }
+
+  .checkbox:checked ~.labelmenu .spammenu::before{
+    transform: rotate(135deg);
+  }
+
+  .checkbox:checked ~.labelmenu .spammenu::after{
+    transform: rotate(-135deg);
+    top: -0.4375rem;
+  }
+
+}
+
+/* Menu não aparece no Layout*/
+@media print {
+    .menunav {
+        display: none !important;
+    }
+}
+
+
+/*Página Index*/
+
+.tcursos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.dcursos{
+  width: 220px;
+  text-align: center;
+  background-color: var(--bordas2);
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 2rem;
+  width: 220px;
+  min-height: 300px;
+}
+
+.dcursos:hover{
+  background-color: var(--bordas3);
+
+}
+
+button{
+  background-color: var(--AzulDarkTech);
+  color: var(--offwhite);
+  font-size: 0.7rem;
+  padding: 0.5rem;
+}
+
+button:hover{
+  background-color: var(--verdeinovacao);
+  font-weight: bold;
+
+}
+
+.apresentacao{
+  margin: 0 auto 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+}
+
+#texto2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: var(--Azulintermediario);
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  width: 400px;
+  color: var(--offwhite);
+  border: 5px solid var(--bordas);
+}
+
+#texto2:hover{
+  background-color: var(--AzulDarkTech);
+  font-weight: bold;
+
+}
+
+
+#texto3{
+    text-align: center;
+}
+
+
+.inscrever{
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+    height: 80px;
+    font-size: 20px;
+
+    
+}
+
+
+
+
+/*Página Cursos*/
+.programacao{
+  justify-content: center;
+  margin: auto;
+  gap: 2rem;
+}
+
+.cursopage{
+  display: flex;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--bordas);
+  margin: 10px;
+  padding: 5px;
+  border-radius: 15px;
+
+}
+/*Página de Contatos*/
+
+.contact_section{
+  background-color: var(--offwhite);
+  border-radius: 32px;
+  padding: 32px 8%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.contact_div{
+  width: min(520px, 100%);
+}
+
+.contact_div h2{
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.contact_div p{
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.contact_div .cartaodiv{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact_div .contactcard{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+  background-color: var(--Azulintermediario);
+  padding: 18px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+  color: var(--offwhite);
+}
+
+.contact_div .contactcard:hover{
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.5);
+}
+
+.contact_form{
+  width: min(520px, 100%);
+  background-color: var(--Azulintermediario);
+  padding: 24px;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.contact_form h2{
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--offwhite);
+}
+
+.contact_form .contactformulario{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact_form .contactformulario .inputgroup{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_form .contactformulario .inputgroup label{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--offwhite);
+  margin-bottom: 6px;
+}
+
+.contact_form .contactformulario input,
+.contact_form .contactformulario textarea{
+  padding: 10px;
+  border: 1px solid var(--offwhite);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  background-color: var(--offwhite);
+  color: var(--textoprincipal);
+}
+
+.contact_form .contactformulario input:focus,
+.contact_form .contactformulario textarea:focus{
+  outline: 3px solid var(--AzulDarkTech);
+}
+
+.contact_form .contactformulario button{
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--AzulDarkTech);
+  color: var(--offwhite);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact_form .contactformulario button:hover{
+  background-color: var(--verdeinovacao);
+}
+
+/*Página de Depoimentos*/
+
+@media (max-width: 900px) {
+  .contact_section,
+  .loginsection,
+  .matriculasection,
+  .cadcursossection,
+  .cadmatriculasection {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 4%;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .contact_div,
+  .contact_form,
+  .logindiv,
+  .matriculadiv,
+  .cadcursosdiv,
+  .cadmatriculadiv,
+  .loginformdiv,
+  .matriculaformdiv,
+  .cadcursoform,
+  .cadmatriculaform {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact_form .contactformulario {
+    grid-template-columns: 1fr;
+  }
+
+  .contact_form .contactformulario button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact_section {
+    padding: 16px 3%;
+    gap: 16px;
+  }
+
+  .headersite {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+.depoimentoform{
+  width: min(700px, 100%);
+  margin: 0 auto;
+  background-color: var(--Azulintermediario);
+  padding: 24px;
+  max-width: 700px;
+  border-radius: 12px;
+}
+
+.depoimentoform input,
+.depoimentoform textarea{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid var(--offwhite);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.depoimentoform input:focus,
+.depoimentoform textarea:focus{
+  outline: 3px solid var(--AzulDarkTech);
+}
+
+
+/*página de Login e Matricula*/
+.loginsection, .matriculasection, .cadcursossection, .cadmatriculasection{
+  background-color: var(--offwhite);
+  border-radius: 32px;
+  padding: 32px 4%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+  margin: 2rem auto;
+  max-width: 1400px;
+}
+
+.logindiv, .matriculadiv, .cadcursosdiv, .cadmatriculadiv{
+  width: min(520px, 100%);
+  background-color: var(--Azulintermediario);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.loginformdiv, .matriculaformdiv, .cadcursoform, .cadmatriculaform{
+  width: min(520px, 100%);
+  background-color: var(--Azulintermediario);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1024px) {
+  .loginsection, .matriculasection, .cadcursossection, .cadmatriculasection {
+    padding: 24px 3%;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .loginsection, .matriculasection, .cadcursossection, .cadmatriculasection {
+    flex-direction: column;
+    padding: 20px 2%;
+    gap: 20px;
+  }
+
+  .logindiv, .matriculadiv, .cadcursosdiv, .cadmatriculadiv,
+  .loginformdiv, .matriculaformdiv, .cadcursoform, .cadmatriculaform {
+    width: 100%;
+  }
+}
+
+/*Admin*/
+
+/*tabelas*/
+table,th,td{
+  border: 1px solid var(--textoprincipal);
+  border-collapse: collapse;
+  padding: 5px 2px 5px 2px;
+  text-align: center;
+}
+
+th{
+  background-color: var(--Azulintermediario)
+}
+
+td{
+  background-color: var(--offwhite);
+}
+
