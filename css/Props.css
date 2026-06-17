@@ -32,3 +32,13 @@
 
 @import "open-props/masks/edges";
 @import "open-props/masks/corner-cuts";
+
+/* Mask Corner Cuts */
+/* NPM */
+@import "open-props/masks/corner-cuts";
+@import "open-props/src/props.masks.corner-cuts.css";
+@import "open-props/masks.corner-cuts.min.css";
+
+/* CDN */
+@import "https://unpkg.com/open-props/masks.corner-cuts.min.css";
+
